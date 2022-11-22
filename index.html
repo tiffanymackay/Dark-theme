@@ -15,7 +15,11 @@
             background: radial-gradient(circle at 10% 20%, rgb(163, 175, 243) 0%, rgb(220, 182, 232) 100.2%); 
             color: #344966;
             font-family: 'Montserrat', sans-serif;
-            margin: 30px auto;
+            margin: 0px;
+        }
+        nav {
+            background-color: white;
+            padding: 20px 40px;
         }
         a {
             color: #BE5CF4;
@@ -30,11 +34,13 @@
         h5 {
             font-weight: 300;
         }
-        ul {
-            padding: 10px 0px;
-        }
-        li {
+        nav ul {
             list-style: none;
+            display: inline-flex;
+        }
+        nav li {
+            padding: 0px 20px;
+
         }
         hr {
             color: #dcdcdc;
@@ -70,7 +76,7 @@
         }
         button {
             display: block;
-            margin: 10px auto;
+            margin: 20px auto;
             border: none;
             padding: 10px 20px;
             background-color: #BE5CF4;
@@ -98,7 +104,7 @@
             text-align: center;
         }
         .dark {
-            background: linear-gradient(to right, #434343 0%, black 100%); 
+            background: linear-gradient(360deg, rgb(1, 1, 1) 0%, rgb(49, 48, 61) 100%);
             color: #fff;
         }
         .dark .container {
@@ -106,6 +112,10 @@
         }
         .dark img:hover {
             background-color: #0D1821;
+        }
+        .dark nav {
+            background-color: #000;
+            color: white;
         }
         @media  (max-width: 800px) {
             .container {
@@ -117,6 +127,16 @@
     </style>
 </head>
 <body>
+    <nav>
+        <ul>
+        <li><a href="#paint">Paint</a></li>
+        <li><a href="#sketchbooks">Sketchbooks</a></li>
+        <li><a href="#brushes">Brushes</a></li>
+        <li><a href="#palettes">Palettes</a></li>
+        <li><a href="#pencils">Pencils</a></li>
+        <li><a href="#pastels">Pastels</a></li>
+    </ul>
+    </nav>
     <button class="theme-button">Change theme</button>
     <div class="container">
         <h1>Tiffany's Favorite Art Supplies🎨</h1>
@@ -138,13 +158,14 @@
                 <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/054/932/original/Screen_Shot_2022-11-21_at_12.49.03_PM.png?1669063851" alt="Violet fields">
             </a>  
          </div>
-         <h2>
+         <h2 id="paint">
             <i class="fa-solid fa-fill"></i> Paint
          </h2>
          <h3>
             Gouache
          </h3>
-         <p> <strong>Windsor & Newton Designer's Gouache</strong> - Great consistency, color options, a little pricey</p>
+         <p><strong>Windsor & Newton Designer's Gouache</strong> - Great consistency, color options, a little pricey</p>
+         <p><strong>Caran D'Ache Studio Gouache Palette</strong> - Really great student quality gouache. It has texture which I love for expressive landscapes. It's also easy to travel with and I love the range of colors. I often mix white with my colors to make them more pastel.</p>
          <p><strong>Miya Himi</strong> - A great budget option. The colors are vibrant, and the texture is clean and smooth when dry.</p>
          <p><strong>Holbein's Acryla Gouache</strong> - Acrylic gouache offers more flexibility than its traditional counterpart. You can overpaint in layers without worrying about smearing. As long as the layer is dry, you are free to add more paint</p>
          <p class="note"><em>Note: I often prefer designers/regular gouache to acrylic gouache as i like to be able to reactivate to blend</em></p>
@@ -154,29 +175,31 @@
          <p><strong>Kuretake Gansai Tambi Watercolors</strong> - Not great for travel but are nice and creamy watercolors</p>
          
          <hr>
-         <h2>
+         <h2 id="sketchbooks">
             <i class="fa-solid fa-book-open"></i> Sketchbooks
          </h2>
          <p><strong>Stillman & Birn Zeta</strong> - 270gsm smooth hot press. My favorite sketchbook for gouache and water that lay's flat. It buckles with a lot of water, however.</p>
          <p><strong>Moleskine Art</strong> - 165gsm smooth. I love this one for sketches and light washes of paint. It handles gouache pretty well.</p>
          <p><strong>Kunst & Papier Paperboard</strong> - 100gsm smooth. I like this one for its larger format that lays flat.</p>
-
+         <a href="https://www.instagram.com/tiffanymackayart/" target="_blank">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/054/935/original/Screen_Shot_2022-11-21_at_12.48.34_PM.png?1669063932" alt="Gouache tree painting">
+        </a>  
          <hr>
-         <h2>
+         <h2 id="brushes">
             <i class="fa-solid fa-paintbrush"></i> Brushes
          </h2>
          <p><strong>Princeton Series Velvetouch</strong> - I love using flat and angle brushes. I use sizes 6-10 most often.</p>
          <p><strong>Pentel Arts Aquash Water Brush</strong> - I love these for traveling. I don't often end up using the water reservoir but I use all the sizes, especially the flat one for quick plein air painting and to add water to blend my Neocolor wax oil pastels.</p>
 
          <hr>
-         <h2>
+         <h2 id="palettes">
             <i class="fa-solid fa-palette"></i> Palettes
          </h2>
          <p><strong>Art Toolkit</strong> - I love this little compact palette! I clip it to my sketchbook and I can travel and paint. It might be a bit small for larger pieces with lots of mixing though.</p>
          <p><strong>Ceramic palettes</strong> - Ceramic palettes are my favorite. They're a but heavy if you want to travel with them but they have a nice, smooth surface. I use both rectangle, flat palettes and flower-like palettes with separate wells.</p>
 
          <hr>
-         <h2>
+         <h2 id="pencils">
             <i class="fa-solid fa-pencil"></i> Pencils
          </h2>
          <p><strong>Prismacolor ColErase</strong> - I love these pencils for sketching and being able to easily erase. I tend to use the same colors as my painting.</p>
@@ -184,7 +207,19 @@
          <p><strong>Caran D'Ache Luminance</strong> - These are my favorite colored pencils to use on top of my gouache paintings. They're very lovely colors.</p>
 
          <hr>
-         <h2>
+         <div class="grid-3">
+            <a href="https://www.instagram.com/tiffanymackayart/" target="_blank">
+                <img src="
+                https://s3.amazonaws.com/shecodesio-production/uploads/files/000/055/014/original/Screen_Shot_2022-11-22_at_9.12.44_AM.png?1669137345" alt="Neocolor wax oil pastels mountain landscapes">
+            </a>
+            <a href="https://www.instagram.com/tiffanymackayart/" target="_blank">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/055/017/original/Screen_Shot_2022-11-22_at_9.15.03_AM.png?1669137395" alt="Neocolor wax oil pastels fantasy forest">
+            </a>
+            <a href="https://www.instagram.com/tiffanymackayart/" target="_blank">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/055/015/original/Screen_Shot_2022-11-22_at_9.13.10_AM.png?1669137359" alt="Neocolor wax oil pastels Seattle landscape">
+            </a>  
+         </div>
+         <h2 id="pastels">
             <i class="fa-solid fa-pen"></i> Pastels
          </h2>
          <p><strong>Caran D'Ache Neocolor II Wax Oil Pastels</strong> - These are my favorite art medium! I love using these to draw on their own, add details on gouache, or to use as a base color while also adding water. They are water soluble. </p>
