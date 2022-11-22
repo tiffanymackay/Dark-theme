@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SheCodes Basics Add-on Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+    <style>
+        body {
+            text-align: center;
+            background: radial-gradient(circle at 10% 20%, rgb(163, 175, 243) 0%, rgb(220, 182, 232) 100.2%); 
+            color: #344966;
+            font-family: 'Montserrat', sans-serif;
+        }
+        a {
+            color: #BE5CF4;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        h2 {
+            font-weight: 500;
+        }
+        .container {
+            max-width: 600px;
+            background-color: white;
+            margin: 20px auto;
+            padding: 10px 15px;
+            border-radius: 10px;
+        }
+        img {
+            border-radius: 12px;
+            margin: 1px 0;
+            max-width: 100%;
+            padding: 5px;
+            transition: opacity 150ms ease-in-out;
+        }
+
+        img:hover {
+            opacity: 0.9;
+            background-color: #DFF6E2;
+            transform: scale(1.01);
+
+        }
+        .main-image {
+            max-width: 600px;
+        }
+        button {
+            display: block;
+            margin: 10px auto;
+            border: none;
+            padding: 10px 20px;
+            background-color: #BE5CF4;
+            color: #fff;
+            border-radius: 6px;
+        }
+        button:hover {
+            background-color: #1F1F1F;
+            cursor: pointer;
+        }
+        .grid {
+            display: grid;
+            margin: 10px auto;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+        .grid img {
+            width: 100%;
+        }
+        footer {
+            margin: 10px auto;
+        }
+        .dark {
+            background: linear-gradient(to right, #434343 0%, black 100%); 
+            color: #fff;
+        }
+        .dark .container {
+            background-color: #1F1F1F;
+        }
+        .dark img:hover {
+            background-color: #0D1821;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-button">Change theme</button>
+    <div class="container">
+        <h1>Wax oil pastels and gouache 🎨</h1>
+        <h2>My favorite painting materials</h2>
+        <a href="https://www.instagram.com/tiffanymackayart/" target="_blank">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/054/931/original/Screen_Shot_2022-11-21_at_12.48.44_PM.png?1669063815" alt="Plein air painting" class="main-img">
+        </a>
+        <div class="grid">
+            <a href="https://www.instagram.com/tiffanymackayart/" target="_blank">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/054/934/original/Screen_Shot_2022-11-21_at_12.49.22_PM.png?1669063915" alt="Plein air painting" >
+            </a>
+            <a href="https://www.instagram.com/tiffanymackayart/" target="_blank">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/054/932/original/Screen_Shot_2022-11-21_at_12.49.03_PM.png?1669063851" alt="Violet fields">
+            </a>
+            <a href="https://www.instagram.com/tiffanymackayart/" target="_blank">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/054/933/original/Screen_Shot_2022-11-21_at_12.49.13_PM.png?1669063878" alt="Sunset hills">
+            </a>    
+            <a href="https://www.instagram.com/tiffanymackayart/" target="_blank">
+                <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/054/935/original/Screen_Shot_2022-11-21_at_12.48.34_PM.png?1669063932" alt="Gouache painting">
+            </a>
+         </div>
+        <p>
+            Neocolors are water-soluble wax oil pastels that are soft, velvety texture creating no dust. While gouache or opaque watercolor is a water-medium paint consisting of natural pigment, water, a binding agent, and sometimes additional inert material. Gouache is designed to be opaque. Gouache has a considerable history, having been used for at least twelve centuries.
+        </p>
+    </div>
+    <footer>
+        Coded with 💜 by <a href="https://www.tiffanymackay.com" target="_blank">Tiffany Mackay</a>
+    </footer>
+    <script>
+        function changeTheme() {
+            let body = document.querySelector("body");
+
+            if (body.classList.contains("dark")) {
+                body.classList.remove("dark");
+            } else {
+                body.classList.add("dark");
+            }
+        }
+        let themeButton = document.querySelector(".theme-button");
+        themeButton.addEventListener("click", changeTheme)
+    </script>
+
+</body>
+</html>
